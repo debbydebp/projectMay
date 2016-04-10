@@ -1,0 +1,16 @@
+http://www.seongnam.go.kr/city/1000329/30253/bbsList.do?searchOrganDeptCd=&searchSelect=add_item_1&searchWord=%EC%95%88%EA%B2%BD
+serachSelect=title	상호명
+serachSelect=add_item_1	품목
+serachSelect=add_item_2	전화번호
+serachSelect=add_item_3	구
+serachSelect=add_item_4	동
+serachSelect=add_item_5	주소
+
+http://www.seongnam.go.kr/city/1000329/30253/bbsList.do?currentPage=237&searchSelect=&searchWord=&searchOrganDeptCd=&searchCategory=&idx=#111892
+
+첫 게시물 id 넘버 idx=#111886
+
+첫번째 칼럼은 css 두번째 칼럼은 출력의 양식이다. 첫 칼럼은 넣지않아도 상관없으나
+두번째칼럼에 값을 넣지않았을 경우 접근이 되질 않았다.
+
+모든 idx 넘버를 가진 라인이 가맹점 정보를 가지고 있는 것은 아니다. add_item5 즉 주소에 경기도 성남시 라는 키워드가 있으면 찾아볼수있을듯하다.
