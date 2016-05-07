@@ -45,7 +45,7 @@ public class SqlConnection{
       System.out.println("<Connecting..>");
       conn = DriverManager.getConnection(url,id,pw);
 
-      System.out.println("Connecting is successful");
+      System.out.println("Connecting is successful\n\n");
 
     }catch(ClassNotFoundException | SQLException e) {
       e.printStackTrace();
@@ -68,7 +68,7 @@ public class SqlConnection{
       stmt.execute(sql);
      System.out.println("SQL EXECUTE: "+sql);
       
-      System.out.println("DB Creation is finished.");
+      System.out.println("DB Creation is finished.\n\n");
       
       } catch(ClassNotFoundException | SQLException e) { //
         e.printStackTrace();
@@ -84,7 +84,7 @@ public class SqlConnection{
       stmt.execute(sql);
       System.out.println("SQL EXECUTE: "+sql);
       
-      System.out.println("Table Creation is finished.");
+      System.out.println("Table Creation is finished.\n\n");
       
     } catch(ClassNotFoundException | SQLException e) {//
       e.printStackTrace();
@@ -99,9 +99,11 @@ public class SqlConnection{
       String sql="insert into "+table+" values "+input;
       stmt.execute(sql);
       System.out.println("SQL EXECUTE: "+sql);
+      System.out.println("insert Successful\n\n");
       
     } catch(ClassNotFoundException | SQLException e) {//
       e.printStackTrace();
+      System.out.println("\n**ERROR : INSERT PROCESS HAS GOT PROBLEM** \n\n");
     }   
   }
   public void insert2Table(String input){
@@ -112,10 +114,11 @@ public class SqlConnection{
       String sql="insert into "+input;
       stmt.execute(sql);
       System.out.println("SQL EXECUTE: "+sql);
-      System.out.println("insert Successful");
+      System.out.println("insert Successful\n\n");
       
     } catch(ClassNotFoundException | SQLException e) {//
       e.printStackTrace();
+      System.out.println("\n**ERROR : INSERT PROCESS HAS GOT PROBLEM** \n\n");
     }   
   }
   
