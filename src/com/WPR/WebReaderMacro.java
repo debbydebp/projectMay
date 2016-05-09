@@ -1,10 +1,12 @@
 /*
- *  author ljw
- *  since 2016.03.31
+ * @author ljw
+ * @since 2016.03.31
+ *
+ * +buffer:StringBuffer
+ * +putin2Buffer(prmURL):void
  * 
- *  codeFinished 16.04.03
- *  file-classifying at 16.05.03
- */
+ */ 
+
 
 package com.WPR;
 
@@ -49,3 +51,9 @@ public class WebReaderMacro {
     }
   }
 }
+
+/*
+ * 
+ * codeFinished 16.04.03
+ * file-classifying at 16.05.03
+ */

@@ -3,9 +3,10 @@
  * @since 2016.05.06
  * 
  * NOTE : 성남시 홈페이지  링크에서 가져온다.
+ * link:String
+ * default 값은 성남시홈페이지
  * +extract(int,int):ArrayList<String>
  * 
- * 컴파일은 되나, 테스트 해보지않음.
  */
 
 package com.WPR;
