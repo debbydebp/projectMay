@@ -56,4 +56,6 @@ public class WebReaderMacro {
  * 
  * codeFinished 16.04.03
  * file-classifying at 16.05.03
+ * 16.05.10 method & filed modified
+ * 
  */

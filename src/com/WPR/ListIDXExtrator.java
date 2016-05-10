@@ -14,8 +14,12 @@ package com.WPR;
 import java.util.ArrayList;
 
 public class ListIDXExtrator{
-  public ListIDXExtrator(){}
-  public ArrayList<String> extract(int FirstPageNUM, int LastPageNUM, WebReaderMacro wrm){
+  private WebReaderMacro wrm;
+  public ListIDXExtrator(){
+    wrm=new WebReaderMacro();
+  }
+  
+  public ArrayList<String> extract(int FirstPageNUM, int LastPageNUM){
     ArrayList<String> tmpArray = new ArrayList<String>();
     String tmp=null;
     String link="http://www.seongnam.go.kr/city/1000329/30253/bbsList.do?currentPage=";

@@ -18,6 +18,9 @@ import java.lang.System;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+//160510
+import java.util.ArrayList;
+
 
 public class SqlConnection{
   private static String id=null;
@@ -27,13 +30,15 @@ public class SqlConnection{
   private static Connection conn;
   private static Statement stmt;
   private static ResultSet rs;
+  private static String timeConnection;
+  private static String timeDisconnection;
   
   public SqlConnection(String id, String pw, String url, String driver){
     long time = System.currentTimeMillis(); 
     SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
-    String str = dayTime.format(new Date(time));
+    timeConnection = dayTime.format(new Date(time));
     
-    System.out.println("SQL Connection : "+str);
+    System.out.println(timeConnection+": Connection has been connected");
     this.id=id;
     this.pw=pw;
     this.url=url;
@@ -48,6 +53,23 @@ public class SqlConnection{
       System.out.println("Connecting is successful\n\n");
       
     }catch(ClassNotFoundException | SQLException e) {
+      e.printStackTrace();
+    }
+  }
+  
+  //160510 sqlExecute at db and Result storage at tmpArray
+  public void sqlExecute(String input,String db, ArrayList<String> tmpArray){
+    try{
+      Class.forName(driver); 
+      stmt.executeQuery("use "+db);
+      System.out.println("SQL EXECUTE: "+input);
+      rs=stmt.executeQuery(input);
+      
+      while(rs.next()){
+        tmpArray.add(String.valueOf(rs.getInt(1)));
+      }
+      
+    } catch(ClassNotFoundException | SQLException e) { //
       e.printStackTrace();
     }
   }
@@ -171,11 +193,15 @@ public class SqlConnection{
   }
   
   public void disconnect(){
+    long time = System.currentTimeMillis(); 
+    SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+    timeDisconnection = dayTime.format(new Date(time));
     try{
       Class.forName(driver); 
       
       stmt.close();
       conn.close();
+      System.out.println(timeDisconnection+": Connection has been disconnected");
     }catch(ClassNotFoundException | SQLException e) {//
       e.printStackTrace();
     }
