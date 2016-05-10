@@ -46,3 +46,7 @@ public class ListIDXExtrator{
     return tmpArray;
   }
 }
+/*
+ * 
+ * 16.05.10 method & filed modified
+ */

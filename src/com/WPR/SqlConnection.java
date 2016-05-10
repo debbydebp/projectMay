@@ -212,15 +212,18 @@ public class SqlConnection{
  * line 45 exception error
  * no suitable driver found for com.mysql.jdbc.Driver
  * java -cp classes;lib/mysql-connector-java-5.1.38-bin.jar com.WPR.MainClass
- * 환경변수 적용이 안됨. 이런시발 .  
+ *
  * [0505]
  * problem & solution : SqlConnection의 driver와 url을 바꿔서 인자를 받아버렸었음
  * exception problem has been resolved
  * problem : 환경변수 해결은 못함
  * solution : 그냥 mysql 커넥트를 라이브러리에 올려서 컴파일함
+ * 
  * [0508]
- * redundancy check fuction added
+ * DB/TABLE redundancy check fuction added
  * +checkTableRedundancy(String,String):booleand
  * +checkDBRedundancy(String)
  * 
+ * [0510]
+ * sqlExecute function added
  */

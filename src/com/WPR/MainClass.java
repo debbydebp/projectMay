@@ -41,10 +41,11 @@ public class MainClass{
     //extract IDX number from List(wrm) (firstPage, lastPage)
     mArrayList = listIDXExtrator.extract(1,1); //first page to last page
     
-    //insert redundancy check
+    //value idx redundancy check
     //idx check in db & storage at tmpAL
     sql.sqlExecute("select idx from placetable","placedb",tmpAL);
     System.out.println("table in : "+tmpAL);
+    //compare tmpAL & mArrayList
     for(i=0; i<mArrayList.size();i++){
       for(j=0;j<tmpAL.size();j++){
         if((mArrayList.get(i)).equals(tmpAL.get(j))){
@@ -102,10 +103,10 @@ public class MainClass{
 
 /* [0404Finished] list RM 
  * [0404Finished] idx RM
- * [0505Finished]SQL CONVERT
- * [0508Finished]DB&table creation redundancy problem
- * [0505Finished]list RM  class-nizing
- * [0506Finisehd]idx RM class-nizing
+ * [0505Finished] SQL CONVERT
+ * [0508Finished] DB&table creation redundancy problem
+ * [0505Finished] list RM  class-nizing
+ * [0506Finisehd] idx RM class-nizing
  * [0510Finished] insert redundancy problem
  * 
  * [] main Class argument(agrs) class-nizing
