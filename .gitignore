@@ -1,6 +1,7 @@
 ﻿
 lib/
 classes/
+logs/
 *.png
 *.class
 *.java~
