@@ -1,0 +1,22 @@
+2016-16-15 04:16:05: Connection has been connected
+<Connecting..>
+Connecting is successful
+
+
+<'placedb' DB Redundancy Checking..>
+SQL EXECUTE: SHOW DATABASES
+we already have got DataBase named 'placedb'
+
+
+<'placetable' DB Redundancy Checking..>
+SQL EXECUTE: SHOW TABLES
+we already have got table named 'placetable' at 'placedb'
+
+
+10 of idx number has found at page 3 to 3...
+[116810, 116809, 116808, 116807, 116806, 116539, 116538, 116537, 116536, 116535]
+SQL EXECUTE: select idx from placetable
+table in : [117159, 117106, 117105, 117104, 117103, 117102, 117101, 116958, 116957, 116956, 116955, 116952, 116846, 116845, 116844, 116843, 116842, 116841, 116840, 116838, 116810, 116809, 116808, 116807, 116806, 116539, 116538, 116537, 116536, 116535]
+Redundancy Check is fine 
+ idx number to insert []
+2016-16-15 04:16:06: Connection has been disconnected

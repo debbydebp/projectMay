@@ -15,15 +15,37 @@ import java.sql.SQLException;
 
 import java.lang.Number;
 
+//for time
+import java.lang.System;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+//log
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
+import java.io.FileNotFoundException;
+
+
+
 public class MainClass{
-  public static void main(String[] args){
+  public static void main(String[] args) throws FileNotFoundException {
+    //for Logs
+    long time = System.currentTimeMillis(); 
+    SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-mm-dd-hh-mm-ss");
+    String logTime = dayTime.format(new Date(time));
+    
+    File file = new File("logs/log-"+logTime+".txt");
+    PrintStream printStream = new PrintStream(new FileOutputStream(file));
+    System.setOut(printStream);
+    //end for logs
+    
     WebReaderMacro wrm=new WebReaderMacro();
     ListIDXExtrator listIDXExtrator=new ListIDXExtrator();
     ReadIDXPage readIDXPage = new ReadIDXPage();
     int i;
     int j;
-    
-    
+        
     ArrayList<String> mArrayList = new ArrayList<String>();
     ArrayList<String> tmpAL = new ArrayList<String>();
     String tmp=null;
@@ -36,10 +58,10 @@ public class MainClass{
     }
     //SQL TABLE Redundancy Check & Create
     if(!sql.checkTableRedundancy("placetable","placedb")){
-      sql.createTable("placetable(idx int, name varchar(50), product varchar(16), tellN varchar(16), dong varchar(8), goo varchar(8), address varchar(64), link varchar(64))");
+      sql.createTable("placetable(idx int, name varchar(50), product varchar(16), tellN varchar(16), dong varchar(8), goo varchar(8), address varchar(64), view int)");
     }
     //extract IDX number from List(wrm) (firstPage, lastPage)
-    mArrayList = listIDXExtrator.extract(1,1); //first page to last page
+    mArrayList = listIDXExtrator.extract(Integer.parseInt(args[0]),Integer.parseInt(args[1])); //first page to last page
     
     //value idx redundancy check
     //idx check in db & storage at tmpAL
@@ -69,7 +91,7 @@ public class MainClass{
       //idx page read
       itemArray=readIDXPage.read(findItem,wrm);
       //SQL insert
-      sql.insert2Table("placeTable (idx, name, product, tellN, dong, goo, address, link) values "+
+      sql.insert2Table("placeTable (idx, name, product, tellN, dong, goo, address, view) values "+
                        "("+ItemidxNumber+", "+
                        "\'"+itemArray[0]+"\', "+
                        "\'"+itemArray[1]+"\', "+
@@ -77,7 +99,7 @@ public class MainClass{
                        "\'"+itemArray[3]+"\', "+
                        "\'"+itemArray[4]+"\', "+
                        "\'"+itemArray[5]+"\', "+
-                       "\'http://visionmind.net\')");
+                       "0)");
       i++; // next idx item
     }
     sql.disconnect();
@@ -108,7 +130,8 @@ public class MainClass{
  * [0505Finished] list RM  class-nizing
  * [0506Finisehd] idx RM class-nizing
  * [0510Finished] insert redundancy problem
+ * [0515Finisehd] fileoutput for logs
+ * [0515Finished] main Class argument(agrs) class-nizing
  * 
- * [] main Class argument(agrs) class-nizing
  * [] db&table creation fit for design-pattern
  */

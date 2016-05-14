@@ -1,0 +1,131 @@
+2016-11-15 04:11:13: Connection has been connected
+<Connecting..>
+Connecting is successful
+
+
+<'placedb' DB Redundancy Checking..>
+SQL EXECUTE: SHOW DATABASES
+we already have got DataBase named 'placedb'
+
+
+<'placetable' DB Redundancy Checking..>
+SQL EXECUTE: SHOW TABLES
+we already have got table named 'placetable' at 'placedb'
+
+
+10 of idx number has found at page 3 to 3...
+[116810, 116809, 116808, 116807, 116806, 116539, 116538, 116537, 116536, 116535]
+SQL EXECUTE: select idx from placetable
+table in : [117159, 117106, 117105, 117104, 117103, 117102, 117101, 116958, 116957, 116956, 116955, 116952, 116846, 116845, 116844, 116843, 116842, 116841, 116840, 116838]
+Redundancy Check is fine 
+ idx number to insert [116810, 116809, 116808, 116807, 116806, 116539, 116538, 116537, 116536, 116535]
+첼로  has been storaged at '0'. 
+의류  has been storaged at '1'. 
+705-7734  has been storaged at '2'. 
+서현동  has been storaged at '3'. 
+분당구  has been storaged at '4'. 
+경기도 성남시 분당구 불정로376번길 37 범한프라자 119-1호  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116810, '첼로 ', '의류 ', '705-7734 ', '서현동 ', '분당구 ', '경기도 성남시 분당구 불정로376번길 37 범한프라자 119-1호 ', 0)
+insert Successful
+
+
+아이지에이마트  has been storaged at '0'. 
+슈퍼  has been storaged at '1'. 
+여수동  has been storaged at '3'. 
+중원구  has been storaged at '4'. 
+경기도 성남시 중원구 성남대로997번길 51-10 102호  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116809, '아이지에이마트 ', '슈퍼 ', 'null', '여수동 ', '중원구 ', '경기도 성남시 중원구 성남대로997번길 51-10 102호 ', 0)
+insert Successful
+
+
+능이오리  has been storaged at '0'. 
+한식  has been storaged at '1'. 
+722-2211  has been storaged at '2'. 
+태평동  has been storaged at '3'. 
+수정구  has been storaged at '4'. 
+경기도 성남시 수정구 제일로 176  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116808, '능이오리 ', '한식 ', '722-2211 ', '태평동 ', '수정구 ', '경기도 성남시 수정구 제일로 176 ', 0)
+insert Successful
+
+
+일번가 세탁  has been storaged at '0'. 
+세탁  has been storaged at '1'. 
+758-7058  has been storaged at '2'. 
+태평동  has been storaged at '3'. 
+수정구  has been storaged at '4'. 
+경기도 성남시 수정구 태평로82번길 13-1  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116807, '일번가 세탁 ', '세탁 ', '758-7058 ', '태평동 ', '수정구 ', '경기도 성남시 수정구 태평로82번길 13-1 ', 0)
+insert Successful
+
+
+배영순 해장국감자탕  has been storaged at '0'. 
+한식  has been storaged at '1'. 
+754-7456  has been storaged at '2'. 
+성남동  has been storaged at '3'. 
+중원구  has been storaged at '4'. 
+경기도 성남시 중원구 광명로 68 대신빌딩  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116806, '배영순 해장국감자탕 ', '한식 ', '754-7456 ', '성남동 ', '중원구 ', '경기도 성남시 중원구 광명로 68 대신빌딩 ', 0)
+insert Successful
+
+
+한살림성남용인소비자 생협 판교매장  has been storaged at '0'. 
+슈퍼  has been storaged at '1'. 
+702-3423  has been storaged at '2'. 
+판교동  has been storaged at '3'. 
+분당구  has been storaged at '4'. 
+경기도 성남시 분당구 운중로267번길 4-10  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116539, '한살림성남용인소비자 생협 판교매장 ', '슈퍼 ', '702-3423 ', '판교동 ', '분당구 ', '경기도 성남시 분당구 운중로267번길 4-10 ', 0)
+insert Successful
+
+
+한살림성남용인소비자 생협 야탑매장  has been storaged at '0'. 
+슈퍼  has been storaged at '1'. 
+701-4001  has been storaged at '2'. 
+야탑동  has been storaged at '3'. 
+분당구  has been storaged at '4'. 
+경기도 성남시 분당구 장미로 42 야탑리더스 105호,106호  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116538, '한살림성남용인소비자 생협 야탑매장 ', '슈퍼 ', '701-4001 ', '야탑동 ', '분당구 ', '경기도 성남시 분당구 장미로 42 야탑리더스 105호,106호 ', 0)
+insert Successful
+
+
+한살림성남용인소비자 생협 정자매장  has been storaged at '0'. 
+슈퍼  has been storaged at '1'. 
+718-4094  has been storaged at '2'. 
+정자동  has been storaged at '3'. 
+분당구  has been storaged at '4'. 
+경기도 성남시 분당구 내정로129번길 37  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116537, '한살림성남용인소비자 생협 정자매장 ', '슈퍼 ', '718-4094 ', '정자동 ', '분당구 ', '경기도 성남시 분당구 내정로129번길 37 ', 0)
+insert Successful
+
+
+한살림성남용인소비자 생협 서현매장  has been storaged at '0'. 
+슈퍼  has been storaged at '1'. 
+781-7737  has been storaged at '2'. 
+서현동  has been storaged at '3'. 
+분당구  has been storaged at '4'. 
+경기도 성남시 분당구 서현로257번길 14  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116536, '한살림성남용인소비자 생협 서현매장 ', '슈퍼 ', '781-7737 ', '서현동 ', '분당구 ', '경기도 성남시 분당구 서현로257번길 14 ', 0)
+insert Successful
+
+
+한살림성남용인소비자 생협 구미매장  has been storaged at '0'. 
+슈퍼  has been storaged at '1'. 
+786-0610  has been storaged at '2'. 
+구미동  has been storaged at '3'. 
+분당구  has been storaged at '4'. 
+경기도 성남시 분당구 구미로116번길 5 수빌딩  has been storaged at '5'. 
+<Insert into Table...>
+SQL EXECUTE: insert into placeTable (idx, name, product, tellN, dong, goo, address, view) values (116535, '한살림성남용인소비자 생협 구미매장 ', '슈퍼 ', '786-0610 ', '구미동 ', '분당구 ', '경기도 성남시 분당구 구미로116번길 5 수빌딩 ', 0)
+insert Successful
+
+
+2016-11-15 04:11:20: Connection has been disconnected
